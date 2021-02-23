@@ -3,7 +3,7 @@ package array;
 public class PalindromePermutation {
 
     public static void main(String[] args){
-        System.out.println(isPalindromePermutation("tact coab"));
+        System.out.println(isPalindromePermutation("tact coa"));
     }
 
     public static boolean isPalindromePermutation(String input){
@@ -17,21 +17,13 @@ public class PalindromePermutation {
                 numOfSpace++;
             }
         }
-        if(input.length() - numOfSpace % 2 == 0){
-            for(int num : count){
-                if(num %2 != 0){
-                    return false;
-                }
+        int counter = 1;
+        for(int num : count){
+            if(num %2 != 0){
+                counter--;
             }
-        }else{
-            int counter = 1;
-            for(int num : count){
-                if(num %2 != 0){
-                    counter--;
-                }
-                if(counter < 0){
-                    return false;
-                }
+            if(counter < 0){
+                return false;
             }
         }
         return  true;
