@@ -6,7 +6,7 @@ public class Client {
         LinkedList<Integer> list = integerLinkedList();
         System.out.println("Input");
         list.print();
-        RemoveDuplicates.solution(list);
+        System.out.println(KthElement.solution(list, 1));
         System.out.println("Output");
         list.print();
     }
