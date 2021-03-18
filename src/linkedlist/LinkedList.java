@@ -12,13 +12,18 @@ class Node<T>{
 public class LinkedList<T> {
     Node<T> head;
 
-    LinkedList(Node<T> head){
-        this.head = head;
+    LinkedList(){
+        this.head = null;
     }
     void add(T data){
         Node<T> newNode = new Node(data);
         newNode.next = head;
         head = newNode;
+    }
+
+    void add(Node node){
+        node.next = head;
+        head = node;
     }
 
     void print(){
